@@ -4,9 +4,9 @@ class Solution:
 
        
         
-        rows = collections.defaultdict(set)
-        cols = collections.defaultdict(set)
-        square = collections.defaultdict(set)
+        rows = defaultdict(set)
+        cols = defaultdict(set)
+        square = defaultdict(set)
         
         for r in range(9):
             for c in range(9):
@@ -14,9 +14,9 @@ class Solution:
                     continue
                 if (board[r][c] in rows[r] or
                     board[r][c] in cols[c] or
-                    board[r][c] in square[(r // 3,c // 3)]):
+                    board[r][c] in square[(r//3,c//3)]):
                     return False
-                square[(r // 3,c // 3)].add(board[r][c])
+                square[(r//3,c//3)].add(board[r][c])
                 rows[r].add(board[r][c])
                 cols[c].add(board[r][c])
         return True
