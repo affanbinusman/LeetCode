@@ -2,6 +2,7 @@ class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
         rows, cols = len(matrix), len(matrix[0])
         top, bottom = 0, rows - 1 
+        row = -1
         
         while top <= bottom:
             row = (top + bottom)//2
@@ -15,7 +16,7 @@ class Solution:
         if top > bottom:
             return False
             
-        row = (top + bottom) // 2    
+        # row = (top + bottom) // 2    
         l, r = 0, cols - 1
         while l <= r:
             mid = (l+r)//2 
