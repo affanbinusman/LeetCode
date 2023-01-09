@@ -13,10 +13,9 @@ class Solution:
             else:
                 break
         
-        if top > bottom:
-            return False
+#         if top > bottom:
+#             return False
             
-        # row = (top + bottom) // 2    
         l, r = 0, cols - 1
         while l <= r:
             mid = (l+r)//2 
