@@ -1,6 +1,7 @@
 class Solution:
-    rep = [i for i in range(26)]
-    
+    rep = [0] * 26
+    # rep = [i for i in range(26)]
+    print(1, rep)
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
@@ -25,7 +26,7 @@ class Solution:
         res = ""
         for i in range(26):
             self.rep[i] = i
-        
+        print(2, self.rep)
         a = ord("a")
         for i in range(len(s1)):
             self.union(ord(s1[i]) - a, ord(s2[i]) - a)
